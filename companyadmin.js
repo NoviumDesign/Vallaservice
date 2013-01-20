@@ -38,7 +38,7 @@ buildForm = function(data) {
 
 		$(formId + ' .products').append(
 				'<option data-secret="' + data.products[i].product_secret + '" value="1">' +
-	        		data.products[i].product + ' ' + data.products[i].price; 
+	        		data.products[i].product + ' ' + data.products[i].price + 
 	            '</option>'
 			);
 	}

@@ -18,8 +18,10 @@ html
         .row
           .span12.bar
             .row
-              .span4
+              .span5
                 img(src="assets/logo.png").masterlogo
+              .span7.hidden-phone
+                h2.introdesc Vallning i Sälen & Mora
 
         .row.jumbotron
           .span12
@@ -38,9 +40,12 @@ html
                 p Oavsett om ni är rutinerade skidåkare eller nykomlingar vill vi se till att ni alltid får de bästa förutsättningarna för ett lyckat lopp. Våra expertiser har mångårig erfarenhet och står redo och hjälpa er välja rätt valla. Utnyttja möjligheten att fråga oss - det lönar sig!
 
               .span4.quality
-                h2 Vallning i Sälen & Mora
-
+                h2 Vallning till vasaloppet
                 p Lämna era skidor i Sälen eller Mora. Vi ser till att de är redo att hämtas vid starten, oavsett vilket lopp ni åker!
+
+                p.visible-phone I Sälen finner ni oss på adressen Berga 141, 780 68 Transtrand
+                p
+                  a.btn.btn-info(href="#order") Boka preparering
                 
                 h2 Vi vallar med
 
@@ -52,9 +57,9 @@ html
             p Om ni vill diskutera kring skidvalla, boka in preparering inför ett lopp  eller om ni har några frågor så är ni mer än välkomna att kontakta oss på Vallaservice! Våra experter är redo att svara på era frågor, både via telefon och epost.
 
             span#shake
-              h4 08-723 10 00 (mån-fre, 08:00 - 18:00)
+              h4 0280-200 30 (mån-fre, 08:00 - 18:00)<br>(lör-sön 10:00-18:00)
               h4 
-                a#order-link(href="mailto:info@svenskkrafta.se") info@vallaservice.se
+                a#order-link(href="mailto:info@vallaservice.se") info@vallaservice.se
 
             p
               iframe(src='//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com%2Fpages%2FVallaservice%2F300111860102970&amp;send=false&amp;layout=button_count&amp;width=150&amp;show_faces=false&amp;font=arial&amp;colorscheme=light&amp;action=recommend&amp;height=21', scrolling='no', frameborder='0', style='border: none; overflow: hidden; width: 150px; height: 21px;', allowtransparency='true')
@@ -115,7 +120,7 @@ html
             .span4.offset1
               h2 Här står vi i Sälen
 
-              p En nyhet för i år är att du kan lämna skidorna där det passar dig och hämta de vid starten, färdigpreparerade och redo för ditt lopp. Vi finns på plats i både Sälen och Mora för att ta emot dina skidor, oavsett vilket lopp du åker. Välkommen!
+              p En nyhet för i år är att du kan lämna skidorna där det passar dig och hämta de vid starten, färdigpreparerade och redo för ditt lopp. Vi finns på plats i både Sälen och Mora för att ta emot dina skidor, oavsett vilket lopp du åker. I Sälen finner ni oss på adressen <strong>Berga 141, 780 68 Transtrand</strong>. Välkommen!
             .span7.photo
               img(src="assets/party-2.jpg").party
           .row.crayfish
@@ -139,17 +144,17 @@ html
           .span4.enlighten
             h2 Frågor? Funderingar? 
 
-            p Om du har några frågor eller vill boka preparering av skidor kan du maila eller ringa oss på <b>08-723 1000</b>.
+            p Om du har några frågor eller vill boka preparering av skidor kan du maila eller ringa oss på <b>0280-200 30</b>.
 
             h3 Lopp och priser
               
             h4 Tider för in-/utlämning av skidor
 
-            a.btn.btn-info#price(href="assets/tider2013.pdf") Se samtliga tider
+            a.btn.btn-info#price(href="assets/tider2013.pdf", target="_blank") Se samtliga tider
 
             h4 Prislista
 
-            a.btn.btn-info#price(href="assets/prislista2013.pdf") Se vår prislista
+            a.btn.btn-info#price(href="assets/prislista2013.pdf", target="_blank") Se vår prislista
 
             form#mc.validate(action='#', method='post', name='mc-embedded-subscribe-form', target='_blank', novalidate='novalidate')
               label(for='mc-email') Prenumerera på vårt nyhetsbrev för att få information inför varje säsong!
@@ -157,7 +162,7 @@ html
               input.btn(type='submit', value='Prenumerera', name='subscribe')
           .span5
             h2 Boka preparering
-            p För att boka preparering, fyll i orderformuläret med vilket lopp du planerar att åka. Om du vill kan du bestämma vilken preparering du vill ha, i annat fall hjälper våra experter dig att vid inlämning välja den bästa vallan.
+            p För att boka preparering, fyll i orderformuläret med vilket lopp du planerar att åka. Om du vill kan du bestämma vilken preparering du vill ha, i annat fall hjälper våra experter dig att vid inlämning välja den bästa vallan. När ni lämnar era skidor går det bra att betala via kort eller med kontanter.
 
             form#order.form-horizontal
               .control-group
@@ -165,19 +170,22 @@ html
                 .controls
                   select.span3(name='customFields[1]')
                     option 
-                    option Kortvasan/Tjejvasan 21/2
-                    option Kortvasan/Tjejvasan 22/2
-                    option Öppetspår 23/2
-                    option Öppetspår 24/2
-                    option Halvvasan 25/2
-                    option Stafettvasan/Skejtvasan 28/2
-                    option Vasaloppet 1/3 
-                    option Vasaloppet 2/3
+                    option Kortvasan 22/2
+                    option Tjejvasan 23/2
+                    option Öppetspår Söndag 24/2
+                    option Öppetspår Måndag 25/2
+                    option Halvvasan 26/2
+                    option Stafettvasan/Skejtvasan 1/3
+                    option Vasaloppet 3/3
               .control-group
                 label.control-label Önskat vallningspaket
                 .controls
                   select.span3.products(name='products')
                     option
+              .control-group
+                label.control-label Antal par skidor 
+                .controls
+                  input.span3.quantity(type='number', value='1', min='1')
               .control-group
                 label.control-label Inlämning av skidor i
                 .controls
@@ -220,11 +228,28 @@ html
                 .control-group
                   label.control-label Telefon
                   .controls
-                    input.span3(type='text', name='customer[phone]')
+                    input.span3(type='tel', name='customer[phone]')
                 .control-group
                   label.control-label Epost
                   .controls
-                    input.span3(type='text', name='customer[mail]')
+                    input.span3(type='email', name='customer[mail]')
+                .control-group
+                  label.control-label Postadress
+                  .controls
+                    input.span3(type='text', name='customer[invoiceAdress]')
+                .control-group
+                  label.control-label Postnr
+                  .controls
+                    input.span3(type='text', name='customer[zipCode]')
+                .control-group
+                  label.control-label Ort
+                  .controls
+                    input.span3(type='text', name='customer[city]')
+                .control-group
+                  label.control-label Skapa ett lösenord för framtida order
+                  .controls
+                    input.span3(type='password', name='customer[secret]')
+
 
 
 
@@ -242,7 +267,7 @@ html
         .right
           p Vallaservice i Sälen
           p info@vallaservice.se
-          p 08-273 10 00
+          p 0280-200 30
 
     // script(type="text/javascript")
       !{script}

@@ -5,8 +5,8 @@ var getFormData, getToken, buildForm;
 
 // constants
 url = 'http://companyadmins.elasticbeanstalk.com';
-company = '';
-business = '';
+company = 'dfg7586ghf';
+business = '43g5345hj3';
 formId = '#order';
 success = '<div class="success"><h2>Tack för din beställning!</h2></div>';
 
@@ -38,7 +38,7 @@ buildForm = function(data) {
 
 		$(formId + ' .products').append(
 				'<option data-secret="' + data.products[i].product_secret + '" value="1">' +
-	        		data.products[i].product + ' ' + data.products[i].price + 
+	        		data.products[i].product + ' ' + data.products[i].price + 'kr' + 
 	            '</option>'
 			);
 	}
@@ -112,6 +112,18 @@ $(formId).submit(function(event) {
 				}
 			}                  
     }, 'json');
+});
+
+// quantity
+$(formId + ' .quantity').change(function() {
+	var value = $(this).val();
+
+	if(value < 1) {
+		$(this).val(1);
+		value = 1;
+	}
+
+	$(formId + ' select.products').children().attr('value', value)
 });
 
 $(document).ready(function() {

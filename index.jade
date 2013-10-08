@@ -79,11 +79,16 @@ html
       .lower
         .container
           .row
-            .span3.offset1
-              h2 Robbin
+            //- .span3.offset1
+              h2 Robin Bryntesson vallar till Vasaloppet
 
-              p Hej
-            .span8.lake.photo
+              p Under Vasaloppsveckan kommer ni kunna få tips och råd från en av Sveriges bästa skidåkare, Robin Bryntesson. Han kommer vara på plats hos oss i Sälen vid inlämningen dagen innan till Öppetspår måndag/söndag och Vasaloppet från kl 12:00-20:00 I Mora kommer han att finnas på plats under inlämningen till halvvasan 12:00-18:00.
+
+              p Här kan ni även passa på att stödja hans fond "Sockertoppen" genom att köpa hans rosa mössor och ställa upp i lite olika tävlingar. Sockertoppen är ett läger för barn och ungdomomar med diabetes.
+
+              a.btn.btn-info.robin(href="assets/bryntesson.pdf", target="_blank") Mer om Robin
+
+            //- .span8.lake.photo
               img(src="assets/lake.jpg")
           .row
             .span8.boat.photo
@@ -169,12 +174,24 @@ html
               label(for='mc-email') Prenumerera på vårt nyhetsbrev för att få information inför varje säsong!
               input#mc-email.email(type='email', value='', name='EMAIL', placeholder='E-mail', required='required')
               input.btn(type='submit', value='Prenumerera', name='subscribe')
+
+            h2 Våra partners
+            p
+              //- a(href="http://bryntes.se") Robin Bryntesson
+              //- br
+              a(href="http://www.swixsport.com") Swix
+              br
+              a(href="http://www.kuzmin.se/pgs/intr_sv.html") Kuzmin
           .span6
             h2 Boka preparering
             p För att boka preparering, fyll i orderformuläret med vilket lopp du planerar att åka. Om du vill kan du bestämma vilken preparering du vill ha, i annat fall hjälper våra experter dig att vid inlämning välja den bästa vallan. När ni lämnar era skidor går det bra att betala via kort eller med kontanter.
             p Fält markerade med <span class="required">*</span> är obligatoriska.
 
-            //if IE
+            //if lt IE 9
+              <p>Bokning via vårt ordersystem stödjs tyvärr inte i gamla Internet Explorer, men häng inte läpp för det! Du kan uppdatera din webbläsare, välja en annan eller så struntar du i tekniken och skickar ett mail till oss med vilket lopp du vill åka samt vilket vallningspaket du önskar. För visst är sport roligare än teknik? :-) </p>
+      
+
+            //if gt IE 8
               iframe(src="http://companyadmins.elasticbeanstalk.com/order/dfg7586ghf/43g5345hj3/index.html", frameborder="0", width="100%", height="600")
 
             //if IE
@@ -215,29 +232,7 @@ html
                     .controls
                       textarea.span3(name='order[deliveryNotes]')
 
-                  .control-group
-                    label.control-label Befintlig kund? <span class="required">*</span>
-                    .controls
-                      label.radio.inline
-                        input(type='radio', name='toggleCustomer', value='true')
-                        span Nej
-                      label.radio.inline
-                        input(type='radio', name='toggleCustomer', value='false')
-                        span Ja
-                        
-
-                section.oldCustomer.hidden
-                  .control-group
-                    label.control-label Kundkod <span class="required">*</span>
-                    .controls
-                      input.try.span3(type='password', name='customer[try]')
-
-                  .control-group
-                    label.control-label
-                    .controls
-                      span.selectedCustomer Ingen matchning
-
-                section.newCustomer.hidden
+                section.newCustomer
                   .control-group
                     label.control-label Fullständigt namn <span class="required">*</span>
                     .controls
@@ -262,10 +257,6 @@ html
                     label.control-label Ort <span class="required">*</span>
                     .controls
                       input.span3(type='text', name='customer[city]')
-                  .control-group
-                    label.control-label Skapa ett lösenord för framtida order <span class="required">*</span>
-                    .controls
-                      input.span3(type='password', name='customer[secret]')
 
                 .control-group
                   .controls
